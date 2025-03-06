@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidencia 2</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <img src="https://www.sephora.com.mx/on/demandware.static/Sites-Sephora_MX-Site/-/default/dw000d22fb/images/logo.gif" alt="Logo de Sephora" class="logo">
+        <h1>Sephora - Belleza y Cosmética</h1>
+    </header>
+
+    <div class="Contenido">
+        <h2>Historia de Sephora</h2>
+        <p>Sephora es un concepto visionario de belleza y venta al por menor fundado en Francia por Dominique Mandonnaud en 1970. El ambiente único de Sephora ofrece total libertad de compra y la posibilidad de encontrar marcas clásicas, de tendencia y de nueva creación que siempre están en continua evolución. Las Marcas del portafolio de Sephora ofrecen una amplia gama de categorías de productos como maquillaje, cuidado para la piel, fragancias, cuidado para el cabello y además cuenta con su marca privada.</p>
+
+        <h2>¿Qué puedes encontrar en Sephora?</h2>
+        <p>Sephora ofrece una variedad de productos de belleza, incluyendo:</p>
+        <ul>
+            <li>Maquillaje (bases, labiales, sombras, rubores, delineadores, etc.)</li>
+            <li>Productos para el cuidado de la piel (cremas hidratantes, sueros, limpiadores faciales, mascarillas, etc.)</li>
+            <li>Perfumes y fragancias para hombres y mujeres</li>
+            <li>Productos para el cabello (shampoos, acondicionadores, tratamientos capilares, etc.)</li>
+            <li>Accesorios de belleza (brochas, esponjas, rizadores de pestañas, etc.)</li>
+        </ul>
+
+        <h2>Sucursales en Monterrey</h2>
+        <p>Algunas de las tiendas Sephora en Monterrey son:</p>
+        <ul>
+            <li>Sephora Galerias Monterrey</li>
+            <li>Sephora Paseo San Pedro</li>
+            <li>Sephora Esfera Fashion Hall</li>
+        </ul>
+
+        <h2 id="nuevos-productos">Productos Nuevos</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="https://beautyboxmerida.com/cdn/shop/products/ImagendeWhatsApp2023-03-30alas13.03.34.jpg?v=1680203504&width=700" alt="Labial Rare Beauty">
+                <h3>Labial Rare Beauty</h3>
+                <p>Un labial mate hidratante de alta pigmentación</p>
+            </div>
+            <div class="producto">
+                <img src="https://static.wixstatic.com/media/a709b8_f35e6c41c2b9474291c21184bffd3646~mv2.jpg/v1/fill/w_600,h_600,al_c,lg_1,q_80,enc_auto/a709b8_f35e6c41c2b9474291c21184bffd3646~mv2.jpg" alt="Paleta Huda Beauty">
+                <h3>Paleta Huda Beauty</h3>
+                <p>Sombras de ojos en tonos vibrantes y duraderos.</p>
+            </div>
+            <div class="producto">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_698753-MLU72577129132_112023-F.webp" alt="Perfume Dior">
+                <h3>Perfume Dior</h3>
+                <p>Fragancia floral sofisticada y duradera.</p>
+            </div>
+        </div>
+
+        <h2>Video Publicitario</h2>
+        <p>Descubre más sobre Sephora en este video:</p>
+        <div class="video-container">
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/Sb5xiSOi3E4" 
+                title="Video de Sephora" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <h2>¿Requieres más información?</h2>
+        <p>Ingresa tus datos y recibe más información.</p>
+        <p>No olvides dejar tu comentario.</p>
+        <button id="abrirFormularioBtn" class="btn">Solicitar más información</button>
+    </div>
+
+    <div id="adPopup" class="popup">
+        <div class="popup-content">
+            <span id="closeAdBtn" class="close-btn">&times;</span>
+            <h2>¡Nuevos Productos!</h2>
+            <p>Descubre nuestros nuevos productos de belleza. ¡No te los pierdas!</p>
+            <img src="https://beautyboxmerida.com/cdn/shop/products/ImagendeWhatsApp2023-03-30alas13.03.34.jpg?v=1680203504&width=700" alt="Nuevo Producto" style="width:100%; max-width:300px;">
+            <a href="#nuevos-productos" class="btn" id="verMasInfoBtn">Ver más información</a>
+        </div>
+    </div>
+
+
+    <div id="formularioPopup" class="popup">
+        <div class="popup-content">
+            <span id="closeFormBtn" class="close-btn">&times;</span>
+            <h2>Contáctanos para recibir más información</h2>
+            <form id="contactForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para manejar los pop-ups
+        // Mostrar el popup de publicidad al cargar la página
+        window.onload = function() {
+            document.getElementById('adPopup').style.display = 'flex';
+        };
+
+        // Cerrar el popup de publicidad al hacer clic en la 'X'
+        document.getElementById('closeAdBtn').onclick = function() {
+            document.getElementById('adPopup').style.display = 'none';
+        };
+
+        // Abrir el popup del formulario de contacto al hacer clic en el botón
+        document.getElementById('abrirFormularioBtn').onclick = function() {
+            document.getElementById('formularioPopup').style.display = 'flex';
+        };
+
+        // Cerrar el popup del formulario de contacto al hacer clic en la 'X'
+        document.getElementById('closeFormBtn').onclick = function() {
+            document.getElementById('formularioPopup').style.display = 'none';
+        };
+
+        // Cerrar los popups si el usuario hace clic fuera del contenido
+        window.onclick = function(event) {
+            var adPopup = document.getElementById('adPopup');
+            var formularioPopup = document.getElementById('formularioPopup');
+
+            if (event.target == adPopup) {
+                adPopup.style.display = 'none';
+            }
+            if (event.target == formularioPopup) {
+                formularioPopup.style.display = 'none';
+            }
+        };
+
+        // Manejar el envío del formulario
+        document.getElementById('contactForm').onsubmit = function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe
+
+            // Aquí puedes agregar la lógica para enviar el formulario (por ejemplo, con AJAX)
+            alert('Formulario enviado correctamente. Nos pondremos en contacto contigo pronto.');
+
+            // Cerrar el popup del formulario después de enviar
+            document.getElementById('formularioPopup').style.display = 'none';
+        };
+
+        // Cerrar el popup de publicidad al hacer clic en "Ver más información"
+        document.getElementById('verMasInfoBtn').onclick = function() {
+            document.getElementById('adPopup').style.display = 'none';
+        };
+    </script>
+        <footer>
+            <p>&copy; 2024 - Fernanda Hernández. Todos los derechos reservados.</p>
+        </footer>
+</body>
+</html>
